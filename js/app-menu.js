@@ -6,8 +6,7 @@
 
     const menuUlElements = document.querySelectorAll('.box-menu'),
           bannerMenu = document.querySelector('.banner-menu'),
-          bannerMenuElements = document.querySelectorAll('.banner-menu-information'),
-          footer = document.querySelector('.footer');
+          bannerMenuElements = document.querySelectorAll('.banner-menu-information');
     let selectedMenuElement = bannerMenuElements[0],
         oldElement = selectedMenuElement,
         mouseInBannerMenu = false,

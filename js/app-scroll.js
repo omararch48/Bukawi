@@ -25,9 +25,9 @@
                 document.querySelector('.mobile-menu-icon').style.top = '0';
             }
         } else {        
-            document.querySelector('.main-menu-container').style.top = '-48rem';
+            document.querySelector('.main-menu-container').style.top = '-55rem';
             if (!document.querySelector('.mobile-menu-container').classList.contains('mobile-active')) {
-                document.querySelector('.mobile-menu-icon').style.top = '-5rem';
+                document.querySelector('.mobile-menu-icon').style.top = '-8rem';
             }
         }
         mainUbication = displacement;

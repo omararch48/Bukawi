@@ -6,6 +6,7 @@
 
     let galeriesPlugins = document.querySelectorAll('.galery .galery-plugin'),
         galeriesButtons = document.querySelectorAll('.galery-images'),
+        mobileMenuIcon = document.querySelector('.mobile-menu-icon'),
         currentGalery = 0,
         displayVector = [],
         windowsVector = [],
@@ -33,11 +34,8 @@
         element.addEventListener('click', () => {
             if (!overClose) {
                 if (!overElement) {
-                    activateElement(
-                        galeriesPlugins[currentGalery], 
-                        // 'display-none', 
-                        'galery-active'
-                    );
+                    activateElement(galeriesPlugins[currentGalery], 'galery-active');
+                    activateElement(mobileMenuIcon, 'display-none');
                 }
             }
         });
@@ -106,8 +104,8 @@
 
     closeVector.forEach((element) => {
         element.addEventListener('click', () => {
-            // activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
             activateElement(galeriesPlugins[currentGalery], 'galery-active');
+            activateElement(mobileMenuIcon, 'display-none');
         });
         element.addEventListener('mouseenter', () => {
             overClose = true;
@@ -119,16 +117,16 @@
 
     galeriesButtons.forEach(function(element, index) {
         element.addEventListener('click', () => {
-            // activateElement(galeriesPlugins[index], 'display-none', 'galery-active');
             activateElement(galeriesPlugins[index], 'galery-active');
+            activateElement(mobileMenuIcon, 'display-none');
             currentGalery = index;
         });
     });
 
     document.addEventListener('keydown', ({key}) => {
         if (key === 'Escape' && galeriesPlugins[currentGalery].classList.contains('galery-active')) {
-            // activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
             activateElement(galeriesPlugins[currentGalery], 'galery-active');
+            activateElement(mobileMenuIcon, 'display-none');
         } else if (key == 'ArrowLeft' && galeriesPlugins[currentGalery].classList.contains('galery-active')) {
             activateElement(
                 displayVector[currentGalery][indexImagesVector[currentGalery]],
