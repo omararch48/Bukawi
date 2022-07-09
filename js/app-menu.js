@@ -8,12 +8,10 @@
           bannerMenu = document.querySelector('.banner-menu'),
           bannerMenuElements = document.querySelectorAll('.banner-menu-information'),
           footer = document.querySelector('.footer');
-    let mainUbication = window.scrollY,
-        selectedMenuElement = bannerMenuElements[0],
+    let selectedMenuElement = bannerMenuElements[0],
         oldElement = selectedMenuElement,
         mouseInBannerMenu = false,
-        selectedIndex = 0,
-        outFooter = true;
+        selectedIndex = 0;
     const activateElement = (element, showClass = '', hiddenClass = '') => {
         element.classList.toggle(showClass);
         if (hiddenClass !== '') {
@@ -61,31 +59,11 @@
         })
     });
 
-    footer.addEventListener('mouseover', () => {
-        outFooter = false;
-    });
-
-    footer.addEventListener('mouseout', () => {
-        outFooter = true;
-    });
-
     document.addEventListener('keydown', ({key}) => {
         if (key === 'Escape' && !bannerMenu.classList.contains('display-none')) {
             activateElement(bannerMenu, 'display-none');
         }
     });
-
-    window.onscroll = function() {
-        let displacement = window.scrollY;
-        if (mainUbication >= displacement) {
-            if (outFooter) {
-                document.querySelector('.main-menu-container').style.top = '0';
-            }
-        } else {        
-            document.querySelector('.main-menu-container').style.top = '-48rem';
-        }
-        mainUbication = displacement;
-    }
 
 
 })();

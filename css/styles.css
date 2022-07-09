@@ -79,6 +79,16 @@ body {
     line-height:      2;    
 }
 
+body::-webkit-scrollbar {
+    background-color: var(--main-gray);
+    width:            1.2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-red);
+    border-radius: 1rem;
+}
+
 
 /*************************************************************/
 /************************* Main Menu *************************/
@@ -157,7 +167,7 @@ body {
 
 .hero-information {
     align-content:    center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     display:          grid;
     height:           100%;
     width:            100%;
@@ -181,32 +191,54 @@ body {
 }
 
 .hero-banner {
-    align-items:     center;
-    align-self:      center;
-    display:         flex;
-    flex-direction:  column;
-    gap:             2rem;
-    height:          100%;
-    justify-content: center;
+    align-items:      center;
+    align-self:       center;
+    background-color: var(--main-light-green);
+    border-radius:    0.5rem;
+    display:          flex;
+    flex-direction:   column;
+    gap:              0.8rem;
+    height:           75%;
+    justify-content:  center;
+    padding:          4rem 2rem;
+    width:            100%;
 }
 
 .hero-banner h2 {
-    font-size:     var(--size-lll);
-    margin-bottom: 8rem;
+    font-size:     var(--size-llll);
+    margin-bottom: 2rem;
 }
 
 .hero-banner button {
     background-color: var(--main-dark-blue);
     border:           0.3rem solid var(--main-white);
-    font-size:        var(--size-llll);
-    margin:           2rem 0;
-    padding:          2rem 4rem;
+    font-size:        var(--size-llllll);
+    margin:           0;
+    padding:          1.6rem 2rem;
     transition:       all linear 0.2s;
 }
 
 .hero-banner button:hover {
     cursor:    pointer;
     transform: scale(1.01);
+}
+
+@media (max-width: 1250px) {
+    .hero-banner {
+        height: 80%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .hero-banner {
+        height: 85%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .hero-banner {
+        height: 90%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -222,24 +254,14 @@ body {
     }   
 
     .hero-banner {
-        background-image: url('../img/jpeg/logo.jpeg');
+        background-image:    url('../img/jpeg/logo.jpeg');
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-    }
-
-    .hero-banner h2 {
-        font-size:     var(--size-llll);
-        margin-bottom: 2rem;
-    }
-
-    .hero-banner button {
-        font-size:        var(--size-lllll);
-        margin:           0;
-        padding:          2rem 4rem;
+        background-repeat:   no-repeat;
+        background-size:     cover;
+        height:              100%;
     }
 }
+
 
 /**********************************************************/
 /************************* Footer *************************/
@@ -380,29 +402,36 @@ footer {
 
 .mobile-menu-icon {
     display:  none;
-    margin:   2rem;
+    margin:   0 2rem;
     right:    2%;
     position: fixed;
     top:      0%;
+    transition: top 0.8s;
     z-index:  10000000;
+}
+
+.mobile-menu-container {
+    background: url('../img/jpg/hero-1.jpg') no-repeat center center/cover;
+    clip-path:  circle(0% at top left);
+    height:     100%;
+    position:   fixed;
+    top:        0;
+    transition: clip-path linear 0.4s;
+    width:      100%;
+    z-index:    1000000;
 }
 
 .mobile-menu {
     align-items:      center;
-    background-color: rgba(0, 152, 218, 1);
-    clip-path:        circle(0% at top left);
-    display:          none;
+    background-color: rgba(0, 152, 218, 0.4);
+    display:          flex;
     flex-direction:   column;
     height:           100%;
     justify-content:  center;
-    position:         fixed;
-    transition:       clip-path linear 0.4s;
-    top:              0;
     width:            100%;
-    z-index:          1000000;
 }
 
-.mobile-menu.mobile-active {
+.mobile-menu-container.mobile-active {
     clip-path: circle(200% at top left);
 }
 
