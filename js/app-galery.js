@@ -35,7 +35,7 @@
                 if (!overElement) {
                     activateElement(
                         galeriesPlugins[currentGalery], 
-                        'display-none', 
+                        // 'display-none', 
                         'galery-active'
                     );
                 }
@@ -106,7 +106,8 @@
 
     closeVector.forEach((element) => {
         element.addEventListener('click', () => {
-            activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
+            // activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
+            activateElement(galeriesPlugins[currentGalery], 'galery-active');
         });
         element.addEventListener('mouseenter', () => {
             overClose = true;
@@ -118,16 +119,51 @@
 
     galeriesButtons.forEach(function(element, index) {
         element.addEventListener('click', () => {
-            activateElement(galeriesPlugins[index], 'display-none', 'galery-active');
+            // activateElement(galeriesPlugins[index], 'display-none', 'galery-active');
+            activateElement(galeriesPlugins[index], 'galery-active');
             currentGalery = index;
         });
     });
 
     document.addEventListener('keydown', ({key}) => {
-        if (key === 'Escape' && !galeriesPlugins[currentGalery].classList.contains('display-none')) {
-            activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
+        if (key === 'Escape' && galeriesPlugins[currentGalery].classList.contains('galery-active')) {
+            // activateElement(galeriesPlugins[currentGalery], 'display-none', 'galery-active');
+            activateElement(galeriesPlugins[currentGalery], 'galery-active');
+        } else if (key == 'ArrowLeft' && galeriesPlugins[currentGalery].classList.contains('galery-active')) {
+            activateElement(
+                displayVector[currentGalery][indexImagesVector[currentGalery]],
+                'galery-plugin-image-selected',
+                'display-none'
+            );
+            if (indexImagesVector[currentGalery] === 0) {
+                indexImagesVector[currentGalery] = displayVector[currentGalery].length - 1;
+            } else {
+                indexImagesVector[currentGalery] -= 1;
+            }
+            activateElement(
+                displayVector[currentGalery][indexImagesVector[currentGalery]],
+                'galery-plugin-image-selected',
+                'display-none'
+            );
+        } else if (key == 'ArrowRight' && galeriesPlugins[currentGalery].classList.contains('galery-active')) {
+            activateElement(
+                displayVector[currentGalery][indexImagesVector[currentGalery]],
+                'galery-plugin-image-selected',
+                'display-none'
+            );
+            if (indexImagesVector[currentGalery] === displayVector[currentGalery].length - 1) {
+                indexImagesVector[currentGalery] = 0;
+            } else {
+                indexImagesVector[currentGalery] += 1;
+            }
+            activateElement(
+                displayVector[currentGalery][indexImagesVector[currentGalery]],
+                'galery-plugin-image-selected',
+                'display-none'
+            );
         }
     });
+
 
 
 })();

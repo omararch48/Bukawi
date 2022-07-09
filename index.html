@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Bukawi | Inicio</title>
 </head>
+<div class="mobile-menu-container">
+    <div class="font-size-3rem mobile-menu-icon color-white color-gray-hover cursor-pointer"><span>Menu&nbsp;&nbsp;</span><i class="fa-solid fa-bars"></i></div>
+    <ul class="mobile-menu">
+        <li style="--i:5" class="box-mobile"><a href="#">Inicio</a></li>
+        <li style="--i:4" class="box-mobile"><a href="#">Nosotros</a></li>
+        <li style="--i:3" class="box-mobile"><a href="#">Productos</a></li>
+        <li style="--i:2" class="box-mobile"><a href="#">Blog</a></li>
+        <li style="--i:1" class="box-mobile"><a href="#">Contacto</a></li>
+    </ul>
+</div>
+<div class="main-menu-container">
 <body>
-    <div class="main-menu-container">
         <ul class="main-menu">
             <li style="--i:5" class="box-menu"><a href="#">Inicio</a></li>
             <li style="--i:4" class="box-menu"><a href="#">Nosotros</a></li>
@@ -74,20 +85,18 @@
         <div class="hero-container">
             <div class="hero hero-home">
                 <div class="hero-information">
-                    <div class="center-flex hero-logo hero-item">
-                        <img src="img/jpeg/logo.jpeg" alt="Bukawi Logo">
-                    </div>
-                    <div class="center-flex hero-message hero-item">
-                        <div class="center-flex hero-message-banner">
-                            <h2>Calcula un presupuesto aproximado</h2>
-                            <p>Tenemos las mejores soluciones para tu ahorro</p>
-                            <div class="button-main">
-                                <a href="#">
+                    <div class="hero-grid">
+                        <img class="hero-logo" src="img/jpeg/logo.jpeg" alt="Bukawi Logo">                        
+                        <div class="hero-banner">
+                            <h2 class="center-text color-white">Calcula un presupuesto aproximado</h2>
+                            <p class="center-text color-white">Tenemos las mejores soluciones para tu ahorro</p>
+                            <a class="clear-link" href="https://omararch48.github.io/Bukawi/">
+                                <button class="color-white">
                                     Calcular Presupuesto
-                                </a>
-                            </div>
+                                </button>
+                            </a>
                         </div>
-                    </div>
+                    </div>            
                 </div>
             </div>
         </div>
@@ -99,7 +108,7 @@
 
          -->
         <section class="galery">
-            <div class="display-none galery-plugin">
+            <div class="galery-plugin">
                 <div class="font-size-3rem galery-close"><i class="color-white color-gray-hover cursor-pointer fa-solid fa-x"></i></div>
                 <div class="galery-plugin-title">
                     <h3 class="center-text color-white">Primer Galería Inicio</h3>
@@ -128,20 +137,27 @@
                 <div class="center-flex galery-title-container">
                     <h3 class="center-text color-white galery-title">Primer Galería Inicio</h3>
                 </div>
-                <div class="center-flex galery-text-container">
-                    <p class="galery-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati porro, dolor repudiandae nesciu.
-                    </p>
-                </div>
-                <div class="center-flex galery-images-container">
-                    <figure class="galery-images">
-                        <div class="display-none center-flex galery-banner">
-                            <h3 class="color-white center-text">
-                                Tenemos los mejores calentadores
-                            </h3>
-                        </div>
-                        <img src="img/jpeg/galery1.jpeg" alt="">
-                    </figure>
+                <div class="galery-container galery-left">
+                    <div class="center-flex galery-text-container">
+                        <p class="justify-text galery-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati porro, dolor repudiandae nesciu.
+                        </p>
+                        <a class="clear-link" href="">
+                            <button class="link-galery color-white color-gray-hover">
+                                Ver más
+                            </button>
+                        </a>
+                    </div>
+                    <div class="galery-images-container">
+                        <figure class="galery-images">
+                            <div class="display-none center-flex galery-banner">
+                                <h3 class="color-white center-text">
+                                    Tenemos los mejores calentadores
+                                </h3>
+                            </div>
+                            <img src="img/jpeg/galery1.jpeg" alt="">
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,7 +167,7 @@
 
          -->
         <section class="galery">
-            <div class="display-none galery-plugin">
+            <div class="galery-plugin">
                 <div class="font-size-3rem galery-close"><i class="color-white color-gray-hover cursor-pointer fa-solid fa-x"></i></div>
                 <div class="galery-plugin-title">
                     <h3 class="center-text color-white">Segunda Galería Inicio</h3>
@@ -180,21 +196,27 @@
                 <div class="center-flex galery-title-container">
                     <h3 class="center-text color-white galery-title">Segunda Galería Inicio</h3>
                 </div>
-                <div class="center-flex galery-images-container">
-                    <figure class="galery-images">
-                        <div class="display-none center-flex galery-banner">
-                            <h3 class="color-white center-text">
-                                Comprueba nuestro servicio
-                            </h3>
-                        </div>
-                        <img src="img/jpeg/galery2.jpeg" alt="">
-                    </figure>
-                </div>
-                <div class="center-flex galery-text-container">
-                    <p class="galery-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati porro, dolor repudiandae nesciu.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
+                <div class="galery-container galery-right">
+                    <div class="galery-images-container">
+                        <figure class="galery-images">
+                            <div class="display-none center-flex galery-banner">
+                                <h3 class="color-white center-text">
+                                    Comprueba nuestro servicio
+                                </h3>
+                            </div>
+                            <img src="img/jpeg/galery2.jpeg" alt="">
+                        </figure>
+                    </div>
+                    <div class="center-flex galery-text-container">
+                        <p class="justify-text galery-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati porro, dolor repudiandae nesciu.
+                        </p>
+                        <a class="clear-link" href="">
+                            <button class="link-galery color-white color-gray-hover">
+                                Ver más meriyein
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -239,6 +261,7 @@
         </div>
     </footer>
     <script src="js/app-menu.js"></script>
+    <script src="js/app-menu-mobile.js"></script>
     <script src="js/app-galery.js"></script>
     <script src="js/app-footer.js"></script>
 </body>
