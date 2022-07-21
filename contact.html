@@ -82,17 +82,13 @@
         </div>
     </div>
     <main id="contact">
-
-        <h2 class="center-text color-dark-blue font-size-l">
+        <h2 class="center-text color-dark-blue contact-title font-size-l">
             Conoce más contactandonos
         </h2>
-
         <section class="contact-form">
-
-
-
-
             <form action="" class="form">
+
+
                 <div class="form__container">
                     <div class="form__group">
                         <input type="text" id="name" class="form__input" placeholder=" ">
@@ -105,18 +101,20 @@
                         <span class="form__line"></span>
                     </div>
                     <div class="form__group">
-                        <input type="text" id="telephone" class="form__input" placeholder=" ">
-                        <label for="telephone" class="form__label">Teléfono:</label>
+                        <input type="tel" id="telephone" class="form__input" placeholder=" ">
+                        <label for="telephone" class="form__label">Teléfono*:</label>
                         <span class="form__line"></span>
                     </div>
+                    <div class="form__group">
+                        <textarea name="info" id="info" rows="5" class="textarea-form" placeholder=" "></textarea>
+                        <label for="info" class="form__label">Mensaje*:</label>
+                    </div>
                 </div>
+                <button class="submit-form color-white color-gray-hover">
+                    Enviar
+                </button>
             </form>
-
-
-
-
-        </section>
-        
+        </section>        
     </main>
     <footer class="footer">
         <div class="footer-container">

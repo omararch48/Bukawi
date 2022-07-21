@@ -16,7 +16,7 @@
     --main-pink:        #f83073;
     --main-light-green: #009933;
     --main-dark-green:  #006633;
-    --form-light:        #56c873;
+    --form-light:       #537958;
     /* Secondary colors */
     --yellow-1: #85780a;
     --yellow-2: #b4b229;
@@ -908,14 +908,19 @@ footer {
     margin-top: 10rem;
 }
 
+.contact-title {
+    margin-bottom: 10rem;
+}
 
 .form {
     align-items:      center;
+    border-radius:    0.5rem;
     display:          flex;
     flex-direction:   column;
     justify-content:  space-around;
     background-color: var(--main-white);
-    width:            60%;
+    max-width:        60rem;
+    width:            90%;
     margin:           0 auto;
     padding:          6rem 4rem;
 
@@ -925,7 +930,6 @@ footer {
     width: 100%;
 }
 
-
 .form__group {
     --color:  var(--form-light);
     margin:   6rem 0;
@@ -933,7 +937,7 @@ footer {
     width:    100%;
 }
 
-
+.textarea-form,
 .form__input {
     width: 100%;
     background: none;
@@ -945,18 +949,21 @@ footer {
     border-bottom: 0.1rem solid var(--color);
 }
 
+.textarea-form:focus,
+.textarea-form:not(:placeholder-shown),
 .form__input:focus,
 .form__input:not(:placeholder-shown) {
     color: var(--main-light-blue);
 }
 
+.textarea-form:focus + .form__label,
+.textarea-form:not(:placeholder-shown) + .form__label,
 .form__input:focus + .form__label,
 .form__input:not(:placeholder-shown) + .form__label {
     transform: translateY(-2.8rem) scale(0.7);
     transform: left top;
     color: var(--main-light-blue);
 }
-
 
 .form__label {
     color: var(--color);
@@ -965,9 +972,8 @@ footer {
     top: 0;
     left: 0.5rem;
     transform: translateY(1rem);
-    transition: transform 0.5s, color 0.3s
+    transition: transform 0.8s, color 0.3s
 }
-
 
 .form__line {
     position: absolute;
@@ -984,4 +990,24 @@ footer {
 .form__input:focus ~ .form__line,
 .form__input:not(:placeholder-shown) ~ .form__line {
     transform: scale(1);
+}
+
+.textarea-form:focus {
+    border-bottom: 0.1rem solid var(--main-light-blue);
+    transform: left bottom;
+    transition: transform 0.4s;
+}
+
+.submit-form {
+    background-color: var(--main-red);
+    border:           none;
+    border-radius:    0.5rem;
+    font-size:        var(--size-llllll);
+    padding:          2rem 6rem;
+    transition:       all linear 0.2s;
+}
+
+.submit-form:hover {
+    cursor:    pointer;
+    transform: scale(1.02);
 }
