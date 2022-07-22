@@ -597,6 +597,18 @@ footer {
     }
 }
 
+/*********************************************************/
+/************************* Waves *************************/
+/*********************************************************/
+
+.blue-wave {
+    background: url('../img/svg/wave-blue2.svg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 10rem 0;
+    width: 100%;
+}
+
+
 
 /************************************************************/
 /************************* Galeries *************************/
@@ -650,8 +662,8 @@ footer {
 .galery-text {
     background-color: var(--main-yellow);
     border-radius:    0.5rem;
-    margin:           0 4rem;
-    height:           25rem;
+    margin:           0 3rem;
+    height:           26rem;
     padding:          4rem;
 }
 
@@ -660,11 +672,18 @@ footer {
     border:           none;
     border-radius:    0.5rem;
     font-size:        var(--size-llllll);
-    padding:          2rem 8rem;
+    padding:          2rem 6rem;
     position:         absolute;
-    right:            0.6%;
     top:              calc(50% + 8rem);
     transition:       all linear 0.2s;
+}
+
+.link-galery.link-right {
+    right: 0.5%;
+}
+
+.link-galery.link-left {
+    left: 0.5%;
 }
 
 .link-galery:hover {
@@ -784,17 +803,37 @@ footer {
 
     .galery-text {
         height:  15rem;
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
 
     .link-galery {
         top: calc(50% + 4rem);
     }
+
+    .link-galery.link-left,
+    .link-galery.link-right {
+        right: 30%;
+        left:  30%;
+    }
+}
+
+@media (max-width: 800px) {
+    .link-galery.link-left,
+    .link-galery.link-right {
+        right: 25%;
+        left:  25%;
+    }
 }
 
 @media (max-width: 600px) {
     .galery-text {
-        height:  20rem;
+        height:  18rem;
+    }
+
+    .link-galery.link-left,
+    .link-galery.link-right {
+        right: 20%;
+        left:  20%;
     }
 
     .link-galery {
@@ -804,7 +843,13 @@ footer {
 
 @media (max-width: 500px) {
     .galery-text {
-        height:  25rem;
+        height:  22rem;
+    }
+
+    .link-galery.link-left,
+    .link-galery.link-right {
+        right: 15%;
+        left:  15%;
     }
 
     .link-galery {
@@ -814,7 +859,7 @@ footer {
 
 @media (max-width: 400px) {
     .galery-text {
-        height:  30rem;
+        height:  26rem;
     }
 
     .link-galery {
@@ -901,29 +946,82 @@ footer {
     font-size: var(--size-llllll);
 }
 
+
+@media (max-width: 800px) {
+    .font-size-l {
+        font-size: var(--size-ll);
+    }
+    
+    .font-size-ll {
+        font-size: var(--size-lll);
+    }
+    
+    .font-size-lll {
+        font-size: var(--size-llll);
+    }
+    
+    .font-size-llll {
+        font-size: var(--size-lllll);
+    }
+    
+    .font-size-lllll {
+        font-size: var(--size-llllll);
+    }
+}
+
+@media (max-width: 400px) {
+    .font-size-l {
+        font-size: var(--size-lll);
+    }
+    
+    .font-size-ll {
+        font-size: var(--size-llll);
+    }
+    
+    .font-size-lll {
+        font-size: var(--size-lllll);
+    }
+    
+    .font-size-llll {
+        font-size: var(--size-llllll);
+    }
+}
+
+
+/***********************************************************/
+/************************* Contact *************************/
+/***********************************************************/
+
 #contact {
     margin-top: 20rem;
 }
+
 #contact ~ footer  {
     margin-top: 10rem;
 }
 
+@media (max-width: 780px) {
+    #contact {
+        margin-top: 10rem;
+    }
+}
+
 .contact-title {
     margin-bottom: 10rem;
+    padding: 0 2rem;
 }
 
 .form {
     align-items:      center;
+    background-color: var(--main-white);
     border-radius:    0.5rem;
     display:          flex;
     flex-direction:   column;
     justify-content:  space-around;
-    background-color: var(--main-white);
-    max-width:        60rem;
-    width:            90%;
     margin:           0 auto;
+    max-width:        60rem;
     padding:          6rem 4rem;
-
+    width:            90%;
 }
 
 .form__container {
@@ -1010,4 +1108,19 @@ footer {
 .submit-form:hover {
     cursor:    pointer;
     transform: scale(1.02);
+}
+
+.form-legend-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.form-legend {
+    color: var(--form-light);
+    font-size: var(--size-normal);
+}
+
+.form-legend:hover {
+    color: var(--main-light-blue);
 }
