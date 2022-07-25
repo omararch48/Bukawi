@@ -288,7 +288,7 @@ footer {
 .footer-container {
     align-items: center;
     display:     flex;
-    height:      85vh;
+    height:      60rem;
     padding:     2rem 4rem 0 4rem;
 }
 
@@ -1222,8 +1222,17 @@ footer {
     }
 }
 
+.contact-form {
+    align-items: center;
+    justify-content: space-around;
+    background:            url('../img/svg/wave-contact-sup.svg') no-repeat center center/cover;
+    display:               flex;
+    min-height:            100vh;
+    width:                 100%;
+}
+
 .contact-title {
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     padding: 0 2rem;
 }
 
@@ -1234,7 +1243,7 @@ footer {
     display:          flex;
     flex-direction:   column;
     justify-content:  space-around;
-    margin:           0 auto;
+    margin:           6 auto;
     max-width:        60rem;
     padding:          6rem 4rem;
     width:            90%;
@@ -1339,4 +1348,15 @@ footer {
 
 .form-legend:hover {
     color: var(--main-light-blue);
+}
+
+.social-contact {
+    align-items:           center;
+    justify-content:       center;
+    background:            url('../img/svg/wave-contact-inf.svg') no-repeat center center/cover;
+    display:               flex;
+    flex-direction:        column;
+    min-height:            calc(100vh + 20rem);
+    padding:               2rem 0;
+    width:                 100%;
 }
