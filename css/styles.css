@@ -778,34 +778,32 @@ footer {
 /* Promo Image */
 
 .photo-presentation {
-    margin: 20rem 0;
-    padding: 2rem;
-    width: 100%;
+    margin:     20rem 0;
     min-height: 100vh;
+    padding:    2rem;
+    width:      100%;
 }
 
 .photo-presentation__container {
-
-    align-items: center;
-    display: flex;
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    height:          100%;
     justify-content: center;
-    flex-direction: column;
-
-    position: relative;   
-    height: 100%;
-    width: 100%; 
+    position:        relative;   
+    width:           100%; 
 }
 
 .photo-presentation__text {
-    color: var(--main-white);
-    border-radius: 0.5rem;
     background-color: var(--main-light-blue);
-    padding: 4rem;
-    position: absolute;    
-    top: -10%;
-    left: 0%;
-    right: 50%;
-    z-index: 100;
+    border-radius:    0.5rem;
+    color:            var(--main-white);
+    left:             0%;
+    padding:          4rem;
+    position:         absolute;    
+    right:            50%;
+    top:              -10%;
+    z-index:          100;
 
 }
 
@@ -813,9 +811,8 @@ footer {
     display:             grid;
     grid-template-areas: "img";
     overflow:            hidden;
-    width: 80%;
+    width:               80%;
 }
-
 
 .photo-presentation__figure::after {
     background-color: rgb(0, 102, 51, 0.85);
@@ -827,7 +824,6 @@ footer {
     font-weight:      bold;
     grid-area:        img;
     place-items:      center;
-
     transform:        translate(100%, -100%);
     transition:       0.3s ease-in;
     text-align:       center;
@@ -864,10 +860,14 @@ footer {
 }
 
 @media (max-width: 1150px) {
+    .photo-presentation {
+        margin: 10rem 0 16rem 0;
+    }
+
     .photo-presentation__text {
-        left: 5%;
+        left:  5%;
         right: 5%;    
-        top: 95%
+        top:   95%
     }
 
     .photo-presentation__figure {    
@@ -875,9 +875,9 @@ footer {
     }
 
     .photo-presentation__link {
-        left:             30%;
-        right:            30%;
-        top: -5%;
+        left:  30%;
+        right: 30%;
+        top:   -5%;
     }
 
     .blue-wave {
@@ -890,8 +890,6 @@ footer {
 }
 
 @media (max-width: 850px) {    
-
-
     .blue-wave {    
         flex-direction: column;
         padding:        6rem;
@@ -911,19 +909,20 @@ footer {
     
     .green-promo__elements {
         margin: 4rem 0;
-        width: 90%;
+        width:  90%;
+    }
+
+    .photo-presentation {
+        margin: 6rem 0 16rem 0;
     }
 
     .photo-presentation__link {
-        left:             20%;
-        right:            20%;
+        left:  10%;
+        right: 10%;
     }
 }
 
 @media (max-width: 500px) {
-
-
-
     .blue-wave {
         padding: 2rem;
     }
@@ -939,6 +938,10 @@ footer {
 
     .index-card__figure img {
         height: 100%;
+    }
+
+    .photo-presentation {
+        margin: 0 0 16rem 0;
     }
 }
 
@@ -1286,7 +1289,6 @@ footer {
     background-color: var(--tiktok-color)
 }
 
-
 .cursor-pointer:hover {
     cursor: pointer;
 }
@@ -1326,7 +1328,6 @@ footer {
 .font-size-llllll {
     font-size: var(--size-llllll);
 }
-
 
 @media (max-width: 800px) {
     .font-size-l {
@@ -1398,7 +1399,7 @@ footer {
 
 .contact-title {
     margin-bottom: 4rem;
-    padding: 0 2rem;
+    padding:       0 2rem;
 }
 
 .form {
@@ -1482,8 +1483,8 @@ footer {
 
 .textarea-form:focus {
     border-bottom: 0.1rem solid var(--main-light-blue);
-    transform:  left bottom;
-    transition: transform 0.4s;
+    transform:     left bottom;
+    transition:    transform 0.4s;
 }
 
 .submit-form {
@@ -1515,6 +1516,8 @@ footer {
     color: var(--main-light-blue);
 }
 
+/* Social cards */
+
 .social-contact {
     align-items:     center;
     justify-content: center;
@@ -1522,43 +1525,35 @@ footer {
     display:         flex;
     flex-direction:  column;
     min-height:      calc(100vh + 20rem);
-    padding:         2rem 0;
+    padding:         12rem 0 4rem 0;
     width:           100%;
 }
 
-
-
-
-
-
-
-
-
 .cards {
-    align-items: center;
+    align-items:     center;
+    display:         flex;
+    flex-wrap:       wrap;
+    font-size:       20px;
     justify-content: center;
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 2rem;
+    gap:             2rem;
+    padding:         2rem;
 }
 
 .cards .flip-card {
-    width: 30rem;
-    height: 36rem;
+    height:      36rem;
+    margin:      2rem;
     perspective: 1000px;
-    margin: 2rem;
+    width:       30rem;
 }
 
 .cards .flip-card .flip-card-inner {
-    color: var(--main-white);
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1.2s ease-in-out;
+    color:           var(--main-white);
+    height:          100%;
+    position:        relative;
+    text-align:      center;
+    transition:      transform 1.2s ease-in-out;
     transform-style: preserve-3d;
+    width:           100%;
 }
 
 .cards .flip-card:hover .flip-card-inner {
@@ -1567,11 +1562,10 @@ footer {
 
 .cards .flip-card .flip-card-front,
 .cards .flip-card .flip-card-back {
-    color: var(--main-white);
-    position: absolute;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
+    height:              100%;
+    position:            absolute;
+    width:               100%;
 
 }
 
@@ -1581,23 +1575,39 @@ footer {
 }
 
 .cards .flip-card .flip-card-front i {
-    border-radius: 2rem;
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    align-items:     center;
+    border-radius:   2rem;
+    display:         flex;
+    font-size:       8rem;
+    height:          100%;
     justify-content: center;
-    font-size: 8rem;
+    width:           100%;
 }
 
 
 .cards .flip-card .flip-card-back {
-    color: var(--main-white);
-    border-radius: 2rem;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
+    align-items:     center;
+    border-radius:   2rem;
+    display:         flex;
+    flex-direction:  column;
+    gap:             4rem;
     justify-content: center;
-    flex-direction: column;
+    transform:       rotateY(180deg);
+}
+
+@media (max-width: 500px) {
+    .cards {
+        gap: 0;
+    }
+    
+    .cards .flip-card {
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .cards .flip-card {
+        height: 38rem;
+        width:  26rem;
+    }
 }
