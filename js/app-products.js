@@ -5,16 +5,14 @@
 
 
     let selectedProduct = -1;
-    const productsVector = document.querySelectorAll('.product');
-
-
-    const activateElement = (element, showClass = '', hiddenClass = '') => {
+    const productsVector = document.querySelectorAll('.product'),
+    activateElement = (element, showClass = '', hiddenClass = '') => {
         element.classList.toggle(showClass);
         if (hiddenClass !== '') {
             element.classList.toggle(hiddenClass);
         }
     },
-        showProducts = () => {
+    showProducts = () => {
             for (let i = 0; i < productsVector.length; i++) {
                 if (i === selectedProduct) {
                     continue;
@@ -35,8 +33,6 @@
             selectedProduct = -1;
         });
     });
-
-
 
 
 })();

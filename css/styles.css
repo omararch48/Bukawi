@@ -1661,78 +1661,89 @@ footer {
 }
 
 .products-container {
-    align-items: center;
+    align-items:     center;
+    display:         flex;
+    flex-wrap:       wrap;
+    gap:             4rem;
     justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 4rem;
-    padding: 2rem;
-    display: flex;
+    padding:         2rem;
 }
-
 
 .product {
     border-radius: 2rem;
-    box-shadow: 0.8rem 0.8rem 1.6rem #000000;
-    width: 32rem;
-    height: 48rem;
-    overflow: hidden;
-    margin: 4rem 2rem;
-    transition: transform ease-in-out 0.6s;
+    box-shadow:    0.8rem 0.8rem 1.6rem #000000;
+    height:        48rem;
+    margin:        4rem 2rem;
+    overflow:      hidden;
+    transition:    transform ease-in-out 0.6s, box-shadow ease-in-out 0.6s;
+    width:         32rem;
 }
 
 .product:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    box-shadow: 1rem 1rem 4rem #000000;
+    cursor:     pointer;
+    transform:  scale(1.1);
 }
-
 
 .product-card {
-    width: 100%;
-    height: 100%;
+    height:   100%;
     position: relative;
+    width:    100%;
 }
 
-
 .product-image {
+    bottom:   0;
+    height:   100%;
+    left:     0;
     position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
+    right:    0;
+    top:      0;
+    width:    100%;
 }
 
 .product-image img {
-    height: 100%;
-    width: 100%;
+    height:     100%;
     object-fit: cover;
+    width:      100%;
 }
 
-
-.product.product-filter {
-    filter: blur(10px);
+.product.product-filter img {
+    filter: blur(4px);
 }
 
 .product-content {
-    align-items: center;
+    align-items:     center;
+    bottom:          0;
+    color:           var(--main-white);
+    display:         flex;
+    flex-direction:  column;
+    height:          100%;
     justify-content: space-between;
-    flex-direction: column;
-    display: flex;
-    color: var(--main-white);
-    position: relative;
-    padding: 0 2rem 2rem 2rem;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    top: -10%;
-    transition: top ease-in-out 0.6s;
+    left:            0;
+    position:        relative;
+    padding:         0 2rem 2rem 2rem;
+    right:           0;
+    top:             -10%;
+    transition:      top ease-in-out 0.6s;
+    width:           100%;
 }
 
 .product:hover .product-content {
     top: -100%;
+}
+
+.product-link {
+    background-color: var(--main-red);
+    border:           none;
+    border-radius:    0.5rem;
+    font-size:        var(--size-llllll);
+    padding:          1rem 2rem;
+    transition:       all linear 0.2s;
+}
+
+.product-link:hover {
+    cursor:    pointer;
+    transform: scale(1.02);
 }
 
 @media (max-width: 500px) {
@@ -1741,16 +1752,113 @@ footer {
     }
 
     .product {
-        width: 30rem;
         height: 50rem;
+        width:  30rem;
     }
 }
-
 
 @media (max-width: 500px) {
     .product {
-        width: 28rem;
         height: 52rem;
+        width:  28rem;
     }
 }
+
+/******************************************************/
+/************************* Us *************************/
+/******************************************************/
+
+#us {
+    margin-top: 20rem;
+}
+
+#us ~ footer  {
+    margin-top: 2rem;
+}
+
+@media (max-width: 780px) {
+    #products {
+        margin-top: 10rem;
+    }
+}
+
+.us-section {
+    position: relative;
+    height: 50rem;
+    margin: 22rem 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.us-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.us-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.us-section-right:hover .us-title {
+    left: 100%;
+}
+.us-section-left:hover .us-title {
+    right: 100%;
+}
+
+.us-section-right .us-title {
+    left: 0;
+    transition: left ease-in-out 1s;
+}
+.us-section-left .us-title {
+    right: 0;
+    transition: right ease-in-out 1s;
+}
+
+.us-title {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 8rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.us-section.us-section-right:hover .us-content {
+    right: 0;
+}
+.us-section.us-section-left:hover .us-content {
+    left: 0;
+}
+
+.us-section-right .us-content {
+    right: 100%;
+    transition: right ease-in-out 1s;
+}
+.us-section-left .us-content {
+    left: 100%;
+    transition: left ease-in-out 1s;
+}
+
+.us-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 4rem;
+    font-size: var(--size-llllll);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 
