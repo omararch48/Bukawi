@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Bukawi | Inicio</title>
 </head>
 <div class="font-size-3rem mobile-menu-icon color-white color-gray-hover cursor-pointer"><span class="mobile-message">Menú&nbsp;&nbsp;</span><i class="fa-solid fa-bars"></i></div>
@@ -82,11 +83,11 @@
         </div>
     </div>
     <main id="contact">
-        <h2 class="center-text color-dark-blue contact-title font-size-l">
+        <h2 class="center-text color-dark-blue contact-title font-size-l" data-aos="zoom-in">
             Conoce más contactandonos
         </h2>
         <section class="contact-form">
-            <form action="" class="form">
+            <form action="" class="form" data-aos="zoom-out-down">
                 <div class="form__container">
                 
                     <div class="form-legend-container">
@@ -124,7 +125,7 @@
                 Redes Sociales
             </h2>
             <div class="cards">
-                <div class="flip-card">
+                <div class="flip-card" data-aos="flip-left" data-aos-once="true">
                     <div class="instagram-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-instagram"></i>
@@ -138,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card" data-aos="flip-right" data-aos-once="true">
                     <div class="linkedin-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-linkedin"></i>
@@ -152,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card" data-aos="flip-left" data-aos-once="true">
                     <div class="tiktok-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-tiktok"></i>
@@ -166,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card" data-aos="flip-right" data-aos-once="true">
                     <div class="twitter-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-twitter"></i>
@@ -180,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card" data-aos="flip-left" data-aos-once="true">
                     <div class="pinterest-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-pinterest"></i>
@@ -194,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card"  data-aos="flip-right" data-aos-once="true">
                     <div class="facebook-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-facebook"></i>
@@ -208,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flip-card">
+                <div class="flip-card"  data-aos="flip-left" data-aos-once="true">
                     <div class="whatsapp-background border-radius-2rem flip-card-inner">
                         <div class="flip-card-front">
                             <i class="fa-brands fa-whatsapp"></i>
@@ -264,6 +265,12 @@
             </h5>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600
+        });
+    </script>
     <script src="js/app-menu.js"></script>
     <script src="js/app-menu-mobile.js"></script>
     <script src="js/app-scroll.js"></script>
