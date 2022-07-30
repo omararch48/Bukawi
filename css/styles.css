@@ -180,6 +180,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .hero-container {
     height: 100vh;
+    overflow-x: hidden;
     width:  100%;
 }
 
