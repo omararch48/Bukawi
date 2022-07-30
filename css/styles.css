@@ -105,6 +105,12 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius:    1rem;
 }
 
+header,
+main,
+section {
+    overflow-x: hidden;
+}
+
 
 /*************************************************************/
 /************************* Main Menu *************************/
@@ -180,7 +186,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .hero-container {
     height: 100vh;
-    overflow-x: hidden;
     width:  100%;
 }
 
