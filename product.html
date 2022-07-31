@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Bukawi | Inicio</title>
 </head>
 <div class="font-size-3rem mobile-menu-icon color-white color-gray-hover cursor-pointer"><span class="mobile-message">Menú&nbsp;&nbsp;</span><i class="fa-solid fa-bars"></i></div>
@@ -81,22 +82,69 @@
             </div>
         </div>
     </div>
+    <div class="image-modal">
+        <div class="image-modal-container">
+            <i class="close-modal-product color-white color-gray-hover cursor-pointer fa-solid fa-x"></i>
+            <figure>
+                <a class="modal-main-link" href="" target="_blank">
+                    <img class="modal-main-image" src="" alt="Bukawi Product Image">
+                </a>
+            </figure>
+        </div>
+    </div>
     <main id="product">
+        <div class="product-detail-title" data-aos="zoom-out">
+            <h2 class="center-text color-dark-blue contact-title font-size-l">
+                Calentador Grande
+            </h2>
+        </div>
         <section class="product-detail-top">
-            <div class="product-detail-title">
-                <h2 class="color-white">
-                    Calentador Grande
-                </h2>
+            <i class="fa-solid fa-solar-panel" data-aos="fade-right"></i>
+            <div data-aos="fade-left">
+                <p>
+                    Esta es una descripción breve del producto, la descripción completa viene abajo junto con la imagen principal y finalmente una galeria del producto
+                </p>
             </div>
         </section>
         <section class="product-detail-center">
             <div class="product-detail-description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse ex ipsa sit. Magni voluptate in totam vel fugit. Cumque ad itaque eligendi perferendis? Ullam distinctio dolores consequatur beatae commodi.</p>
+                <div data-aos="fade-up">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse ex ipsa sit. Magni voluptate in totam vel fugit. Cumque ad itaque eligendi perferendis? Ullam distinctio dolores consequatur beatae commodi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse ex ipsa sit. Magni voluptate in totam vel fugit. Cumque ad itaque eligendi perferendis? Ullam distinctio dolores consequatur beatae commodi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse ex ipsa sit. Magni voluptate in totam vel fugit. Cumque ad itaque eligendi perferendis? Ullam distinctio dolores consequatur beatae commodi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse ex ipsa sit. Magni voluptate in totam vel fugit. Cumque ad itaque eligendi perferendis? Ullam distinctio dolores consequatur beatae commodi.
+                    </p>
+                </div>
+                <figure data-aos="fade-down">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.27 PM(2).jpeg" alt="Bukawi Product Image" title="Calentador Grande">
+                </figure>
             </div>
         </section>
         <section class="product-detail-bottom">
             <div class="product-detail-galery">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non esse, id culpa laborum aliquam, fuga error, quidem dicta tenetur adipisci quod voluptatem. Ducimus optio commodi aliquam laudantium natus! Nisi, sed?</p>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.26 PM.jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.27 PM(1).jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.27 PM(2).jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.36 PM(1).jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.36 PM.jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.38 PM.jpeg" alt="Bukawi Product Image">
+                </figure>
+                <figure class="product-detail-galery__figure"  data-aos="flip-left">
+                    <img src="img/jpeg/WhatsApp Image 2022-06-21 at 5.12.39 PM.jpeg" alt="Bukawi Product Image">
+                </figure>
+                
             </div>
         </section>
 
@@ -142,9 +190,16 @@
         </div>
     </footer>
     <script src="js/app-menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            once: true
+        });
+    </script>
     <script src="js/app-menu-mobile.js"></script>
-    <script src="js/app-scroll.js"></script>
     <script src="js/app-product.js"></script>
+    <script src="js/app-scroll.js"></script>
     <script src="js/app-footer.js"></script>
 </body>
 </html>
